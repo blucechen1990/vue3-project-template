@@ -29,6 +29,7 @@
     setup() {
       const zhCnStr = 'zh-CN'
       const enStr = 'en'
+
       const getConfig = (langVal) => {
         let locale;
         let lang;
@@ -44,10 +45,14 @@
         }
         return {locale, lang, messageConfig}
       }
-      
+
+      // 获取当前浏览器语言
       const lang = ref(navigator.language)
       const defaultConfig = getConfig(navigator.language)
+      // element-ui 组件的中英文
       const locale = ref(defaultConfig.locale)
+
+      // 本地开发的组件的中英文
       const messageConfig = ref(defaultConfig.messageConfig)
 
      
@@ -59,7 +64,10 @@
         messageConfig.value = Config.messageConfig;
       }
 
+      // 中英文配置
+      // 使用时只需inject即可获取配置信息 const message = inject('message')
       provide('message', messageConfig);
+
         
       return {
         lang,

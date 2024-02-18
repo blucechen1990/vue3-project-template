@@ -12,9 +12,10 @@ import ElementPlus from 'unplugin-element-plus/vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   css: {
+    // 按需导入时自定义主题
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "~/assets/theme/index.scss" as *;`,
+        additionalData: `@use "~/assets/theme/index.scss" as *;`, // 主题文件
       },
     },
   },

@@ -6,7 +6,7 @@ const message = inject('message')
 
 const show = () => {
   console.log(message)
-  ElMessage('test')
+  ElMessage(message.value.test)
 }
 
 </script>
@@ -19,7 +19,8 @@ const show = () => {
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/demo">demo</RouterLink>
+        <RouterLink to="/user">user</RouterLink>
       </nav>
     </div>
   </header>
