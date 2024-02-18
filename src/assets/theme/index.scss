@@ -1,0 +1,38 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': green,
+    ),
+  ),
+);
+
+// @use 'element-plus/theme-chalk/src/index.scss';
+
+
+
+// $themes: (
+//     light: (
+//         'primary': #c1af2e,
+//     ),
+//     dark: (
+//         'primary': rgb(32, 169, 126),
+//     ),
+// );
+
+// @mixin themeify {
+//     @each $theme-name , $theme-map in $themes {
+//         body[data-theme=#{$theme-name}] & {
+//             @content($theme-map)
+//         }
+//     }
+// };
+
+// // @function getColor($theme-map, $color-name) {
+// //     @return map-get($map: $theme-map , $key: $color-name)
+// // };
+
+// @mixin color{
+//     @include themeify using ($theme-map)  {
+//         color: map-get($theme-map, 'primary')
+//     }
+// };
