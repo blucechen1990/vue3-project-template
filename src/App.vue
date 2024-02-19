@@ -1,6 +1,6 @@
 <script setup>
 import Test from '@/views/Test/index.vue'
-
+console.log('import.meta.env.MODE',import.meta.env)
 </script>
 
 <template>

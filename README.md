@@ -45,3 +45,15 @@ npm run lint
 8. 常用全局指令安装
 
 ```
+```
+"scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build-1": "vite build --mode mode1-env", // 构建不同的环境变量
+    "build-2": "vite build --mode mode2-env",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+},
+import.meta.env.MODE 使用测可以获取当前运行环境
+```
