@@ -1,5 +1,6 @@
 <script setup>
 import {inject} from 'vue'
+// import LoadMore from '@/components/LoadMore/index.vue'
 
 const message = inject('message')
 
@@ -8,15 +9,17 @@ const show = () => {
   ElMessage(message.value.test)
 }
 
+
 </script>
 
 <template>
   <h1>test</h1>
+  <input type="text" v-focus v-positive-num-precision="2">
+ 
   <header>
     {{ message.test }}
     <el-button type="primary" @click="show">我是 ElButton</el-button>
     <div class="wrapper">
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/demo">demo</RouterLink>

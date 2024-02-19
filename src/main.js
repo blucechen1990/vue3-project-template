@@ -11,6 +11,10 @@ import { createPinia } from 'pinia'
 // import ElementPlus from 'element-plus'
 // app.use(ElementPlus)
 
+// 自定义
+import installDirective from '@/directives/index'
+import registerGlobalComponent from '@/components/registerGlobalComponent'
+
 
 
 import ConfigProvider from './ConfigProvider.vue'
@@ -20,6 +24,9 @@ const app = createApp(ConfigProvider)
 
 app.use(createPinia())
 app.use(router)
+
+installDirective(app)
+registerGlobalComponent(app)
 
 
 app.mount('#app')
