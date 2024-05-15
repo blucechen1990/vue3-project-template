@@ -1,33 +1,40 @@
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
-// import './assets/main.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
-// 全部引入， 按需引入不需要这些
-// import '~/assets/theme/index.scss'
-// import 'element-plus/theme-chalk/src/index.scss'
-// 全部引入， 按需引入不需要这个
-// import ElementPlus from 'element-plus'
-// app.use(ElementPlus)
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import { createI18n } from 'vue-i18n'
+import zhMessage from '@/utils/lang/zh'
+import enMessage from '@/utils/lang/en'
+import '@/assets/main.css'
 
 // 自定义
 import installDirective from '@/directives/index'
 import registerGlobalComponent from '@/components/registerGlobalComponent'
-
-
 
 import ConfigProvider from './ConfigProvider.vue'
 import router from './router'
 
 const app = createApp(ConfigProvider)
 
-app.use(createPinia())
+const pinia = createPinia()
+pinia.use(piniaPluginPersistedstate)
+
+const i18n = createI18n({
+    legacy: false,
+    locale: 'zh', // 默认语言
+    fallbackLocale: 'en', // 默认语言未配置相关国际化， 使用英文
+    messages: {
+        en: enMessage,
+        zh: zhMessage
+    }
+})
+
+app.use(pinia)
 app.use(router)
+app.use(i18n)
 
 installDirective(app)
 registerGlobalComponent(app)
-
 
 app.mount('#app')
 

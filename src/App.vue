@@ -1,13 +1,15 @@
 <script setup>
-import Test from '@/views/Test/index.vue'
-console.log('import.meta.env.MODE',import.meta.env)
+// import { dayjs } from 'element-plus'; // 默认被element导出
+// import { isNil } from 'lodash';
+// console.log(dayjs)
 </script>
 
 <template>
-  <h1>App</h1>
-  <Test />
-  
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped>
+
 </style>

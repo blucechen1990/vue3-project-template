@@ -1,11 +1,11 @@
-import numberForm from './numberForm'
+import numberFormat from './number-format'
 
 // 指令集合
 const directives =  {
     focus: {
         mounted: (el) => el.focus()
     },
-    ...numberForm
+    ...numberFormat
 }
 
 export default function install(app) {
