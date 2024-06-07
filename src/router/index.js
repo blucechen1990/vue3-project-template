@@ -4,6 +4,7 @@ import Layout from '@/layout/index.vue'
 import Demo01 from '@/views/Demo/child-01.vue'
 import Demo02 from '@/views/Demo/child-02.vue'
 import Login from '@/views/Demo/login.vue'
+import SwiperDemo from '@/views/Demo/swipper-demo.vue'
 import useUser from '@/store/useUser'
 
 const router = createRouter({
@@ -28,6 +29,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: Login,
+    },
+    {
+      path: '/swipper-demo',
+      name: 'swipper-demo',
+      component: SwiperDemo,
     },
     notFoundRoute, // 404
   ]
