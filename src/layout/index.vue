@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="text-[#fca5a5]">布局视图</div>
-    <h1>App - {{ $t('test') }}</h1>
-    <p class="text-3xl font-bold underline">
-      Hello world!
-    </p>
-    <RouterView />
+    <header-nav>布局视图</header-nav>
+    <div class="flex">
+      <side>左侧导航</side>
+      <router-view class="flex-grow" />
+    </div>
   </div>
 </template>
 <script setup>
-
+import HeaderNav from './header-nav.vue'
+import side from './side/index.vue'
 </script>
 <style scoped lang="scss"></style>

@@ -1,7 +1,7 @@
 <template>
   <el-config-provider :locale="locale">
     <app />
-    <!-- <el-button type="primary" @click="switchLang">语言切换</el-button> -->
+    <!-- <el-button type="primary" @click="switchLang">语言切换测试</el-button> -->
     <!-- <el-date-picker type="date" placeholder="Pick a day" /> -->
   </el-config-provider>
 </template>
