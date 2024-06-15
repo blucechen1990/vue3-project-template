@@ -1,6 +1,6 @@
 # 技术栈
 ```
-该项目模板采用vue3 + element-plus + pina + tailwindcss
+该项目模板采用vue3 + element-plus + pina + tailwindcss + axios
 开发格式化工具采用： eslint + prettier + husky + lint-staged
 
 ```
