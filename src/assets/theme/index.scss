@@ -1,4 +1,5 @@
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  // 这里可以覆盖主题
   $colors: (
     'primary': (
       'base': green,
