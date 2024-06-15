@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <div class="h-full flex flex-col">
     <header-nav>布局视图</header-nav>
-    <div class="flex">
+    <div class="flex flex-grow">
       <side>左侧导航</side>
-      <router-view class="flex-grow" />
+      <div class="p-2">
+        <router-view class="flex-grow" />
+      </div>
     </div>
   </div>
 </template>

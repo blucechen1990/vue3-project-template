@@ -1,6 +1,6 @@
 <template>
   <template v-for="(menu, index) of menus" :key="index">
-    <el-sub-menu :index="`${parentPath}_${menu.path}`" v-if="menu.children?.length">
+    <el-sub-menu :index="menu.path" v-if="menu.children?.length">
       <template #title>
         <el-icon>
           <location />
@@ -10,11 +10,11 @@
       <menu-item :menus="menu.children" :parent-path="menu.path"></menu-item>
     </el-sub-menu>
 
-    <el-menu-item :index="`${parentPath}_${menu.path}`" v-else>
+    <el-menu-item :index="menu.path" v-else>
+      <el-icon>
+        <location />
+      </el-icon>
       <template #title>
-        <el-icon>
-          <location />
-        </el-icon>
         <span>{{ menu.meta?.title }}</span>
       </template>
     </el-menu-item>
