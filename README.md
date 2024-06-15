@@ -1,4 +1,17 @@
-# oversea-management
+# 技术栈
+```
+该项目模板采用vue3 + element-plus + pina + tailwindcss
+开发格式化工具采用： eslint + prettier + husky + lint-staged
+
+```
+## 项目功能
+```
+1. 路由
+2. 国际化
+3. 权限
+4. 登录 
+5. table + form组件已经封装好
+```
 
 This template should help get you started developing with Vue 3 in Vite.
 
