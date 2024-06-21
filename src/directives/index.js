@@ -1,10 +1,10 @@
 import positiveFormat from './positive-num-precision'
-// import numberFormat from './format-to-number'
+import numberFormat from './format-to-number'
 
 // 指令集合
 const directives = {
-  ...positiveFormat
-  // ...numberFormat,
+  ...positiveFormat,
+  ...numberFormat
 }
 
 export default function install(app) {
