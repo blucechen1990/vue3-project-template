@@ -1,16 +1,15 @@
-import numberFormat from './number-format'
+import positiveFormat from './positive-num-precision'
+// import numberFormat from './format-to-number'
 
 // 指令集合
-const directives =  {
-    focus: {
-        mounted: (el) => el.focus()
-    },
-    ...numberFormat
+const directives = {
+  ...positiveFormat
+  // ...numberFormat,
 }
 
 export default function install(app) {
-    const directiveNames = Object.keys(directives)
-    directiveNames.forEach(directiveName => {
-        app.directive(directiveName, directives[directiveName])
-    })
+  const directiveNames = Object.keys(directives)
+  directiveNames.forEach((directiveName) => {
+    app.directive(directiveName, directives[directiveName])
+  })
 }
